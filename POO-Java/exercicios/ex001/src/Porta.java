@@ -1,9 +1,12 @@
+//Criando a classe:
 public class Porta {
+    //Atributos:
     private String cor;
     private float altura;
     private float largura;
     private boolean estaAberta;
 
+    //Construtor:
     public Porta(String cor, float altura, float largura, boolean estaAberta) {
         this.cor = cor;
         this.altura = altura;
@@ -11,6 +14,7 @@ public class Porta {
         this.estaAberta = estaAberta;
     }
 
+    //Métodos getters e setters:
     public String getCor() {
         return cor;
     }
@@ -36,8 +40,8 @@ public class Porta {
         this.estaAberta = estaAberta;
     }
     
-    @Override
+    //Método toString()
     public String toString() {
-        return String.format("Cor da porta: %s\nAltura: %.1fm\nLargura: %.1fm\nEstá aberta? %s\n", this.getCor(), this.getAltura(), this.getLargura(), this.isEstaAberta());
+        return "Cor da porta: " + this.getCor() + ", Altura: " + this.getAltura() + ", Largura: " + this.getLargura() + ", Está aberta? " + this.isEstaAberta();
     }
 }

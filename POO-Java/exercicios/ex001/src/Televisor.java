@@ -1,14 +1,47 @@
+//Criando a classe:
 public class Televisor {
+    //Atributos:
     private int canal;
     private int volume;
     private boolean ligado;
 
+    //Construtor:
     public Televisor(int canal, int volume, boolean ligado) {
         this.canal = canal;
         this.volume = volume;
         this.ligado = ligado;
     }
+    
+    //Métodos:
+    public void ligar() {
+        //Verifica se o atributo 'ligado' NÃO é true:
+        if(!this.isLigado()) { //O sinal de exclamação significa 'diferente de' ou 'não'
+            this.setLigado(true); //Usando o método setLigado() para mudar o valor do atributo 'ligado'
+        }
+    }
+    public void desligar() {
+        //Verifica se o atributo 'ligado' é true:
+        if(this.isLigado()) {
+            this.setLigado(false); //Usando o método setLigado() para mudar o valor do atributo 'ligado'
+        }
+    }
+    public void aumentarVolume() {
+        if(this.isLigado() && this.getVolume() <= 95) { //Se for true E o volume for menor igual a 95
+            this.setVolume(this.getVolume() + 5); //Usando o método setVolume() e alterando pelo valor retornado de getVolume() + 5
+        }
+    }
+    public void diminuirVolume() {
+        if(this.isLigado() && this.getVolume() >= 5) { //Se for true E o volume for maior igual a 5
+            this.setVolume(this.getVolume() - 5); //Usando o método setVolume() e alterando pelo valor retornado de getVolume() - 5
+        }
+    }
+    public void trocarCanal(int can) {
+        if(this.isLigado()) { //Se for true
+            this.setCanal(can); //Usando o método setCanal() e alterando pelo valor do parâmetro 'can' digitado pelo usuário
+        }
+    }
 
+    //Métodos getters e setters:
     public int getCanal() {
         return canal;
     }
@@ -27,39 +60,9 @@ public class Televisor {
     public void setLigado(boolean ligado) {
         this.ligado = ligado;
     }
-
-    public void ligar() {
-        if(!isLigado()) {
-            this.setLigado(true);
-        }
-    }
-    public void desligar() {
-        if(isLigado()) {
-            this.setLigado(false);
-        }
-    }
-    public void aumentarVolume() {
-        if(isLigado() && this.getVolume() <= 95) {
-            this.volume += 5;
-        }
-    }
-    public void diminuirVolume() {
-        if(isLigado() && this.getVolume() >= 5) {
-            this.volume -= 5;
-        }
-    }
-    public void trocarCanal(int can) {
-        if(isLigado()) {
-            this.canal = can;
-        }
-    }
     
     @Override
     public String toString() {
-        String vol = "";
-        for(int i = 0; i < this.volume; i+=10) {
-            vol += "|";
-        }
-        return String.format("Canal: %d\nVolume: %s (%d)\nLigado? %s\n", this.getCanal(), vol, this.getVolume(), this.isLigado());
+        return "Canal: " + this.getCanal() + ", Volume: " + this.getVolume() + ", Está ligado? " + this.isLigado();
     }
 }

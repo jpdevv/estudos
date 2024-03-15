@@ -1,33 +1,26 @@
+//Criando a classe:
 public class ControleRemoto {
-    private Televisor tv;
+    private Televisor tv; //Atribuindo à variável 'tv' o objeto Televisor vindo da classe Televisor
 
+    //Construtor da classe:
     public ControleRemoto(Televisor tv) {
         this.tv = tv;
     }
 
+    //Métodos herdados da classe Televisor:
     public void ligar() {
-        if(!tv.isLigado()) {
-            tv.setLigado(true);
-        }
+        tv.ligar();
     }
     public void desligar() {
-        if(tv.isLigado()) {
-            tv.setLigado(false);
-        }
+        tv.desligar();
     }
     public void aumentarVolume() {
-        if(tv.isLigado() && tv.getVolume() <= 95) {
-            tv.setVolume(tv.getVolume() + 5);
-        }
+        tv.aumentarVolume();
     }
     public void diminuirVolume() {
-        if(tv.isLigado() && tv.getVolume() >= 5) {
-            tv.setVolume(tv.getVolume() - 5);
-        }
+        tv.diminuirVolume();
     }
     public void trocarCanal(int can) {
-        if(tv.isLigado()) {
-            tv.setCanal(can);
-        }
+        tv.trocarCanal(can);
     }
 }

@@ -1,14 +1,18 @@
+//Criando a classe:
 public class Professor {
+    //Atributos:
     private int matricula;
     private String nome;
     private String departamento;
 
+    //Construtor:
     public Professor(String nome, int matricula, String departamento) {
         this.nome = nome;
         this.matricula = matricula;
         this.departamento = departamento;
     }
 
+    //Métodos getters e setters:
     public int getMatricula() {
         return matricula;
     }
@@ -28,8 +32,8 @@ public class Professor {
         this.departamento = departamento;
     }
 
-    @Override
+    //Método toString():
     public String toString() {
-        return String.format("Nome: %s\nMatrícula: %d\nDepartamento: %s\n", this.getNome(), this.getMatricula(), this.getDepartamento());
+        return "Nome: " + this.getNome() + ", Matrícula: " + this.getMatricula() + ", Departamento: " + this.getDepartamento();
     }
 }
