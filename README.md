@@ -1,2 +1,2 @@
-# pEstudos
+# Estudos
  Repositório de estudos
