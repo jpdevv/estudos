@@ -15,6 +15,6 @@ public class Retangulo {
     }
 
     public String imprimir() {
-        return String.format("-------[ Retângulo ]-------\nComprimento do retâgulo: %dm\nLargura do retângulo: %dm\nÁrea do retângulo: %dm²\nPerímetro do retângulo: %dm\n", this.comprimento, this.largura, this.calcularArea(), this.calcularPerimetro());
+        return String.format("-------[ Retângulo ]-------\nComprimento do retâgulo: %dm\nLargura do retângulo: %dm\nÁrea do retângulo: %dm²\nPerímetro do retângulo: %dm\n\n", this.comprimento, this.largura, this.calcularArea(), this.calcularPerimetro());
     }
 }
