@@ -1,6 +1,6 @@
 public class Circulo {
     private int raio;
-    protected double pi = 3.141516;
+    private double pi = 3.141516;
 
     public Circulo(int raio) {
         this.raio = raio;
@@ -15,6 +15,6 @@ public class Circulo {
     }
 
     public String imprimir() {
-        return String.format("Raio do circulo: %dm\nÁrea do circulo: %fm²\nPerímetro do circulo: %fm\n", this.raio, this.calcularArea(), this.calcularPerimetro());
+        return String.format("-------[ Circulo ]-------\nRaio do circulo: %dm\nÁrea do circulo: %fm²\nPerímetro do circulo: %fm\n", this.raio, this.calcularArea(), this.calcularPerimetro());
     }
 }

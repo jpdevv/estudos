@@ -14,6 +14,6 @@ public class Quadrado {
     }
 
     public String imprimir() {
-        return String.format("Metragem dos lados do quadrado: %dm\nÁrea do quadrado: %dm²\nPerímetro do quadrado: %dm\n", this.lado, this.calcularArea(), this.calcularPerimetro());
+        return String.format("-------[ Quadrado ]-------\nMetragem dos lados do quadrado: %dm\nÁrea do quadrado: %dm²\nPerímetro do quadrado: %dm\n", this.lado, this.calcularArea(), this.calcularPerimetro());
     }
 }
