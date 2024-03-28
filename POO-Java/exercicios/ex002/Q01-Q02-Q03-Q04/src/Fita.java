@@ -17,10 +17,10 @@ public class Fita {
 
     public String getValorAluguel(int numDiasAlugada) {
         float alug = (this.aluguel * numDiasAlugada);
-        return String.format("A fita '%s' foi alugada por %d dias, o valor total é de R$%.2f\n\n", this.getTitulo(), numDiasAlugada, alug);
+        return "A fita '" + this.titulo + "' foi alugada por " + numDiasAlugada + " dias, no valor total de R$" + alug + "\n";
     }
 
     public String toString() {
-        return String.format("-------[ Fita ]-------\nTitulo da fita: %s\nValor do aluguel: R$%.2f/dia", this.getTitulo(), this.getAluguel());
+        return "Fita\nTítulo: " + this.titulo + "\n" + "Valor do aluguel: R$" + this.aluguel + "/dia" + "\n";
     }
 }
